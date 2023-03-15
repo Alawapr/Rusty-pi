@@ -88,6 +88,7 @@ fn main ()
 
     let duration = end_time - start_time;
     println!("\nThe program took {:?} to generate {:?} digits.", duration, number);
+    io::stdin().read_line(&mut input).expect("Failed to read line");
 }
 
 
