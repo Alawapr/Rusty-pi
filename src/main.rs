@@ -73,8 +73,6 @@ fn pi (precision: u64) -> String
 
 fn main ()
 {
-    let digits = 1000;
-
     let start_time = Instant::now();
 
     let mut input = String::new();
@@ -89,7 +87,7 @@ fn main ()
     let end_time = std::time::Instant::now();
 
     let duration = end_time - start_time;
-    println!("\nThe program took {:?} to generate {:?} digits.", duration, digits);
+    println!("\nThe program took {:?} to generate {:?} digits.", duration, number);
 }
 
 
