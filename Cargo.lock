@@ -3,7 +3,7 @@
 version = 3
 
 [[package]]
-name = "Rusty-pi"
+name = "rusty_pi"
 version = "0.1.0"
 dependencies = [
  "num-bigint",

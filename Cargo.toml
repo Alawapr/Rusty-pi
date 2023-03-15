@@ -1,5 +1,5 @@
 [package]
-name = "Rusty-pi"
+name = "rusty_pi"
 version = "0.1.0"
 edition = "2021"
 
