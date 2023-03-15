@@ -2,7 +2,7 @@
 
 This is just a fun program for me to learn rust. It's not focused on speed, just on functionality.
 
-This is the times I got with my current set-up:
+These are the times I got with my current set-up:
 
 500 digits - 2.0 secs
 
