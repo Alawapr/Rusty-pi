@@ -7,6 +7,7 @@ use ::std::{*,
         Sub,
     },
 };
+
 use ::num_bigint::{ // 0.2.2
     BigInt,
     BigUint,
@@ -38,11 +39,6 @@ fn pi (precision: u64) -> String
 
         while current_term.abs() > target {
             ret = ret + current_term;
-            // eprintln!(
-            //     "atan({}) ~ {}",
-            //     x,
-            //     ret.decimal(precision as usize),
-            // );
             n += &two;
             sign = -sign;
             x_pow_n = x_pow_n * &x_square;
@@ -58,6 +54,7 @@ fn pi (precision: u64) -> String
         try_from(precision)
             .expect("Overflow")
     ;
+    
     let pi_approx = Fraction::sub(
         Fraction::from(16) * atan(
             Fraction::new(1.into(), 5_u32.into()),
@@ -91,31 +88,6 @@ fn main ()
     io::stdin().read_line(&mut input).expect("Failed to read line");
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 mod fraction {
     #![allow(clippy::suspicious_arithmetic_impl)]
     use super::*;
@@ -135,11 +107,11 @@ mod fraction {
         PartialEq, Eq,
         Ord,
     )]
+    
     pub
     struct Fraction {
         pub
         numerator: BigInt,
-
         pub
         denominator: BigUint,
     }
@@ -422,6 +394,7 @@ mod fraction {
     trait SignSplit {
         fn split (self: &'_ Self) -> (Sign, BigUint);
     }
+    
     impl SignSplit for BigInt {
         fn split (self: &'_ BigInt) -> (Sign, BigUint)
         {
