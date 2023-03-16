@@ -70,13 +70,14 @@ fn pi (precision: u64) -> String
 
 fn main ()
 {
-    let start_time = Instant::now();
 
     let mut input = String::new();
     println!("Enter the number of digits to generate for pi:");
     io::stdin().read_line(&mut input).expect("Failed to read line");
     let number: u64 = input.trim().parse().expect("Invalid input");
 
+    let start_time = Instant::now();
+    
     println!("\nGenerating {} digits of pi...", number);
 
     println!("\n{}", pi(number));
